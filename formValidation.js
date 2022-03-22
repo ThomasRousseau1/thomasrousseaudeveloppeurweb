@@ -44,7 +44,7 @@ function displayForm() {
             </div>
             <label id="message">VOTRE MESSAGE*</label>
             <textarea name="Objet de la demande" class="textarea"></textarea>
-            <a href="" class="main__btn">ENVOYER</a>
+            <button class="main__btn" type="submit">ENVOYER</button>
         </form>
         `
     )
