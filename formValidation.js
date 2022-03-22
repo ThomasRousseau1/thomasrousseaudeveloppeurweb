@@ -5,7 +5,7 @@ function displayForm() {
         "beforeend",
         `
         <img src="ressources/bekky-bekks-gk-2lMtCeR8-unsplash.jpg" class="contact__img">
-        <form class="contact__form">
+        <form action="https://formsubmit.co/thomas.rousseaudev@outlook.fr" method="POST" class="contact__form">
             <div class="contact__titles">
                 <h2>VOUS SOUHAITEZ ÉCHANGER ET PARTAGER VOS ENVIES ?</h2>
                 <p>CE FORMULAIRE SERA NOTRE POINT DE DÉPART.</p>
@@ -30,20 +30,20 @@ function displayForm() {
             <label>NOM</label>
             <div class="contact__container">
                 <i class="fa-solid fa-user"></i>
-                <input class="names">
+                <input type="nom" name="Nom" class="names">
             </div>
             <label>PRÉNOM</label>
             <div class="contact__container">
                 <i class="fa-solid fa-user"></i>
-                <input class="names">
+                <input type="prénom" name="Prénom" class="names">
             </div>
             <label id="mail">MAIL*</label>
             <div class="contact__container">
                 <i class="fa-solid fa-envelope"></i>
-                <input class="mail">
+                <input type="email" name="Mail" class="mail">
             </div>
             <label id="message">VOTRE MESSAGE*</label>
-            <textarea class="textarea"></textarea>
+            <textarea name="Objet de la demande" class="textarea"></textarea>
             <a href="" class="main__btn">ENVOYER</a>
         </form>
         `
