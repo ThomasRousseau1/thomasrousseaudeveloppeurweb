@@ -1,0 +1,578 @@
+//ACCUEIL
+.main {
+    .main__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 25rem;
+        padding: 5rem 0 5rem 0;
+        width: 80%;
+        margin: 0 auto;
+        text-align: justify;
+        animation: apparition 1.5s ease forwards;
+        & p {
+            color: #fff;
+            width: 60%;
+            max-width: 40rem;
+            margin-bottom: 5rem;
+        }
+        & h2 {
+            font-size: 2rem;
+            color: $colour-secondary;
+            margin-top: 0;
+            background-color: $colour-tertiary;
+            padding: 0 0.5rem 0 0.5rem;
+        }
+        .main__secondTitle {
+            color: $colour-secondary;
+            font-size: 1.7rem;
+        }
+        & h3 {
+            font-size: 3rem;
+            color: $colour-secondary;
+        }
+        .main__btn {
+            background-color: $colour-tertiary;
+        }
+    }
+}
+
+.banner__img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+    height: 42rem;
+    object-fit: cover;
+    opacity: 0.9;
+    filter: brightness(30%);
+}
+
+.offers {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    .offers__container {
+        color: #fff;
+        width: 100%;
+        height: 15rem;
+        background-color: darkslategray;
+        width: 23%;
+        padding: 1rem;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 7rem 0 7rem 0;
+        text-align: -webkit-center;
+        .offers__title {
+            font-size: 1.8rem;
+            margin-top: 0.3rem;
+            margin-bottom: 7rem;
+        }
+        .offers__desc {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .offers__link {
+            color: $colour-secondary;
+            background-color: $colour-tertiary;
+            padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+            border-radius: 5px;
+        }
+        &:nth-child(1) {
+            background-image: url(ressources/diogo-fagundes-XvQkiEkLrss-unsplash.jpg);
+        }
+        &:nth-child(2) {
+            background-image: url(ressources/pickawood-gf8e6XvG_3E-unsplash.jpg);
+        }
+        &:nth-child(3) {
+            background-image: url(ressources/anete-lusina-zwsHjakE_iI-unsplash.jpg);
+        }
+    }
+}
+
+
+//Partie description
+.cards {
+    width: 100%;
+    height: 30rem;
+    background-color: $colour-background;
+    display: flex;
+    justify-content: center;
+    // & h2 {
+    //     margin: 0 auto;
+    // }
+    &__container {
+        width: 25rem;
+        padding: 1rem 1rem 0 1rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        .cards__card {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            padding: 2rem;
+            & i {
+                font-size: 2rem;
+                color: $colour-primary;
+            }
+
+        }
+    }
+}
+
+//CREATION DE SITES 
+.main__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    & h2 {
+        background-color: $colour-tertiary;
+        color: $colour-secondary;
+        font-size: 2rem;
+        padding: 0 0.5rem 0 0.5rem;
+    }
+    & p {
+        font-size: 1.2rem;
+    }
+}
+
+.main__cards {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+    .main__card::before {
+        transform: scaleX(0);
+        transform-origin: bottom right;
+    }
+    .main__card:hover::before {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+    .main__card::before {
+        content: " ";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        inset: 0 0 0 0;
+        background: $colour-primary;
+        z-index: -1;
+        transition: transform .3s ease;
+    }
+    .main__card {
+        position: relative;
+        margin: 2rem;
+        padding: 1rem;
+        border-radius: 5px;
+        -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.46); 
+        box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.46);
+        height: 22rem;
+        margin-top: 5rem;
+        animation: apparition 1.5s ease forwards;
+        .main__icon {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            margin: 0 auto;
+            justify-content: center;
+        }
+        & i {
+            font-size: 2rem;
+            color: #BC6C25;
+        }
+        & h3 {
+            text-align: center;
+        }
+        & a {
+            position: absolute;
+            background-color: $colour-tertiary;
+            bottom: 0;
+            right: 0;
+            margin: 1rem;
+            align-self: center;
+        }
+        &:hover {
+            & i {
+                color: $colour-hover;
+            }
+            & p, h3 {
+                color: #fff;
+            }
+            .main__btn{
+                background: $colour-hover;
+            }
+        }
+    }
+}
+
+@keyframes apparition {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+//Partie offres
+.main__offer {
+    height: 50rem;
+    display: flex;
+    .main__container {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .main__info {
+            margin-top: 2rem;
+        }
+        & h3 {
+            background-color: $colour-primary;
+            color: $colour-secondary;
+            font-size: 2.5rem;
+            padding: 0.5rem;
+            align-self: flex-start;
+            margin-bottom: 0.5rem;
+        }
+        & h4 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+    & img {
+        width: 50%;
+        object-fit: cover;
+        transition: 500ms;
+    }
+
+    .main__cardInfos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        padding: 1rem;
+        border-radius: 5px;
+        -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.46); 
+        box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.46);
+        height: 40%;
+        width: 40%;
+        .main__quote {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 0;
+        }
+        & p:nth-child(2) {
+            text-align: center;
+            color: darkslategrey;
+            margin-bottom: 0;
+        }
+        .main__price {
+            font-size: 2rem;
+            text-align: center;
+            margin: 0;
+        }
+        .main__btn {
+            text-align: center;
+            margin-top: 1rem;
+            background-color: $colour-tertiary;
+        }
+
+    }
+}
+
+//A PROPOS
+.apropos {
+    display: flex;
+    flex-direction: row;
+    &__container {
+        margin: 3rem;
+    }
+    &__img {
+        width: 50%;
+        height: 100%;
+    }
+}
+
+//REALISATIONS 
+.cards__sites {
+    height: 40rem;
+    background-color: $colour-background;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+.cards__card--rea {
+    height: 45%;
+    padding: 1rem;
+    overflow: hidden;
+    .cards__rea {
+        display: none;
+        visibility: hidden;
+    }
+    & h3 {
+        margin-bottom: 0;
+    }
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 300ms;
+    }
+    &:hover {
+        img {
+            opacity: 0.3;
+            transform: scale(0.98);
+            overflow: hidden;
+        }
+        .cards__rea {
+            position: relative;
+            bottom: 15rem;
+            display: flex;
+            visibility: visible;
+            flex-direction: column;
+            text-align: center; 
+        }
+        .cards__btn {
+            padding: 1rem;
+            border: 2px solid $colour-tertiary;
+            width: 40%;
+            margin: 0 auto;
+            transform-origin: left;
+            transition: 300ms;
+            &:hover {
+                background-color: $colour-tertiary;
+                color: $colour-secondary;
+            }
+        }
+    }
+}
+
+
+//CONTACT
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .contact__img {
+        position: absolute;
+        height: 110%;
+        width: 100%;
+        object-fit: cover;
+        opacity: 0.6;
+        filter: brightness(70%);
+    }
+    .contact__titles {
+        width: 100%;
+        margin-bottom: 3rem;
+        & h2 {
+            background: $colour-tertiary;
+            color: $colour-secondary;
+            padding: 0 0.5rem 0 0.5rem;
+        }
+        & p {
+            background: $colour-tertiary;
+            color: $colour-secondary;
+            text-align: center;
+        }
+    }
+    .contact__form {
+        position: relative;
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: column;
+        width: 40rem;
+        .contact__infos {
+            display: flex;
+            align-items: center;
+            & i {
+                margin-right: 0.6rem;
+            }
+        }
+        & select {
+            border: none;
+        }
+        & label {
+            margin-top: 1rem;
+        }
+        & input {
+            height: 1.8rem;
+            border: none;
+            width: 100%;
+            transition: 100ms;
+        }
+        & textarea {
+            border: none;
+            height: 5rem;
+            transition: 100ms;
+        }
+    }
+    .contact__container {
+        display: flex;
+        & i {
+            background-color: $colour-primary;
+            color: $colour-secondary;
+            padding: 0.5rem;
+            text-align: center;
+        }
+        width: 100%;
+    }
+    & label i{
+        color: #CC3300;
+        font-size: 1.3rem;
+    }
+    .main__btn {
+        text-align: center;
+        margin-top: 2rem;
+        background-color: $colour-tertiary;
+    }
+}
+
+//RESPONSIVE 
+//ACCUEIL 
+@media screen and(max-width: 800px) {
+    .main {
+        .main__content {
+            width: 100%;
+            & h2 {
+                font-size: 1.3rem;
+            }
+            .main__secondTitle {
+                width: 80%;
+                font-size: 1.2rem;
+            }
+            & p {
+                width: 80%;
+            }
+        }
+    }
+    .offers {
+        display: flex;
+        flex-direction: column;
+        .offers__container {
+            width: 100%;
+            height: 20rem;
+            margin-bottom: 0;
+            padding: 0;
+        }
+    }
+    .cards {
+        display: flex;
+        flex-direction: column;
+        height: 50rem;
+        align-items: center;
+        .cards__container {
+            padding: 1rem 0 1rem 0;
+            width: 90%;
+            .cards__card {
+                padding: 0;
+            }
+        }
+    }
+}
+//CREATION DE SITES
+@media screen and(max-width: 1200px) {
+    .main__cards {
+        .main__card  {
+            height: 28rem;
+            margin: 1rem
+        }
+    }
+    .main__offer {
+        .main__cardInfos {
+            width: 70%;
+        }
+        .main__info {
+            margin: 2rem;
+        }
+    }
+}
+
+@media screen and(max-width: 900px) {
+    .main__cards {
+        flex-direction: column;
+        align-items: center;
+        .main__card {
+            width: 70%;
+        }
+        & p {
+            text-align: center;
+        }
+    }
+}
+
+@media screen and(max-width: 700px) {
+    .main__offer {
+        .main__container {
+            width: 100%;
+            z-index: 1;
+            .main__info {
+                color: #fff;
+            }
+            & h4 {
+                color: #fff;
+                background-color: $colour-primary;
+            }
+            .main__cardInfos {
+                background-color: #fff;
+            }
+        }
+        & img {
+            width: 100%;
+            position: absolute;
+            height: 50rem;
+        }
+    }
+    .main__title {
+        & h2 {
+            font-size: 1.5rem;
+            text-align: center;
+        }
+    }
+}
+@media screen and(max-width: 425px) {
+    .main__cards {
+        .main__card {
+            width: 80%;
+        }
+    }
+    .main__offer {
+        .main__container {
+            & h4 {
+                font-size: 1.5rem;
+            }
+        }
+        .main__cardInfos {
+            width: 80%;
+        }
+    }
+}
+
+//REALISATIONS 
+@media screen and(max-width: 700px) {
+    .cards__sites {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20rem;
+        margin-bottom: 10rem;
+        align-items: center;
+        background-color: #fff;
+        .cards__container {
+            padding: 0;
+            width: 100%;
+        }
+    }
+}
+
+//CONTACT
+@media screen and(max-width: 700px) {
+    .contact {
+        .contact__form {
+            width: 90%;
+        }
+    }
+}

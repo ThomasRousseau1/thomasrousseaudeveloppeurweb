@@ -1,0 +1,113 @@
+.header { 
+    margin: 0;
+    width: 100%;
+    height: 7rem;
+    background-color: $colour-primary;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    color: $colour-secondary;
+    & h1 {
+        margin-left: 1rem;
+    }
+    .navbar {
+        margin-bottom: 1rem;
+        & a {
+            margin: 0 1rem 0 1rem;
+            color: $colour-secondary;
+        }
+    }
+    .border{
+        position: relative;
+        padding-bottom: 0.3rem;
+    }
+    
+    .border:hover:after{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        border-bottom: solid 1px $colour-secondary;
+        animation: leftToRight 500ms ease-in forwards;
+    }
+}
+
+@keyframes leftToRight {
+    20% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+
+//RESPONSIVE 
+@media screen and(max-width: 700px) {
+    .burger__menu {
+        background-color: $colour-primary;
+        width: 10rem;
+        position: absolute;
+        z-index: 3;
+        display: flex;
+        // flex-direction: column;
+        // height: 8rem;
+        right: 0;
+        // align-items: center;
+        justify-content: center;
+        justify-content: space-evenly;
+        width: 100%;
+        & a {
+            margin-bottom: 5px;
+            color: $colour-secondary;
+        }
+    }
+    .header {
+        position: relative;
+        flex-direction: row;
+    }
+    .navbar {
+        & a {
+            display: none;
+            visibility: hidden;
+        }
+    }
+    .burger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        justify-content: flex-end;
+        margin-right: 1rem;
+        width: 50px;
+        cursor: pointer;
+        .burger__menu {
+            background-color: $colour-secondary;
+            width: 100%;
+            height: 5rem;
+            // height: 8rem;
+            // position: absolute;
+            // top: 0;
+            // align-items: center;
+        }        
+        .burger__line {
+            width: 2rem;
+            height: 0.3rem;
+            background-color: $colour-secondary;
+            margin: 2px 0 2px 0;
+            border-radius: 15px;
+        }
+    }  
+}
+
+
+
+@media screen and(min-width: 700px) {
+    .navbar {
+        .burger {
+            display: none;
+            visibility: hidden;
+        }
+    }
+}
