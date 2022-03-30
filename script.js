@@ -8,7 +8,7 @@ burger.addEventListener("click", () => {
         `
         <div class="burger__menu">
         <a href="index.html">Accueil</a>
-        <a href="creation-de-sites.html">Réalisation de sites</a>
+        <a href="creation-de-sites.html">Création de sites</a>
         <a href="realisations.html">Réalisations</a>
         <a href="contact.html">Contact</a>
         </div>

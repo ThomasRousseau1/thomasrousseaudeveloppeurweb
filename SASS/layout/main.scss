@@ -33,6 +33,10 @@
         }
         .main__btn {
             background-color: $colour-tertiary;
+            transition: 300ms;
+            &:hover {
+                background-color: lighten($colour-primary, 20%);
+            }
         }
     }
 }
@@ -55,9 +59,9 @@
     .offers__container {
         color: #fff;
         width: 100%;
-        height: 15rem;
+        height: 18rem;
         background-color: darkslategray;
-        width: 23%;
+        width: 26%;
         padding: 1rem;
         background-position: center;
         background-size: cover;
@@ -67,17 +71,23 @@
         .offers__title {
             font-size: 1.8rem;
             margin-top: 0.3rem;
-            margin-bottom: 7rem;
+            margin-bottom: 9rem;
         }
         .offers__desc {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             font-weight: bold;
+            color: $colour-tertiary;
+            background-color: $colour-background;
         }
         .offers__link {
             color: $colour-secondary;
             background-color: $colour-tertiary;
             padding: 0.5rem 1.5rem 0.5rem 1.5rem;
             border-radius: 5px;
+            transition: 300ms;
+            &:hover {
+                background-color: lighten($colour-primary, 20%);
+            }
         }
         &:nth-child(1) {
             background-image: url(ressources/diogo-fagundes-XvQkiEkLrss-unsplash.jpg);
@@ -280,6 +290,10 @@
             text-align: center;
             margin-top: 1rem;
             background-color: $colour-tertiary;
+            transition: 300ms;
+            &:hover {
+                background-color: lighten($colour-primary, 20%);
+            }
         }
 
     }
@@ -358,9 +372,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    animation: apparition 1.5s ease forwards;
     .contact__img {
         position: absolute;
-        height: 110%;
+        height: 120%;
         width: 100%;
         object-fit: cover;
         opacity: 0.6;
@@ -373,6 +388,7 @@
             background: $colour-tertiary;
             color: $colour-secondary;
             padding: 0 0.5rem 0 0.5rem;
+            text-align: center;
         }
         & p {
             background: $colour-tertiary;
@@ -384,8 +400,12 @@
         position: relative;
         margin-top: 5rem;
         display: flex;
-        flex-direction: column;
-        width: 40rem;
+        justify-content: space-between;
+        width: 45rem;
+        height: 40rem;
+        border-radius: 5px;
+        -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.46); 
+        box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.46);
         .contact__infos {
             display: flex;
             align-items: center;
@@ -395,6 +415,8 @@
         }
         & select {
             border: none;
+            height: 1.8rem;
+            background-color: $colour-background;
         }
         & label {
             margin-top: 1rem;
@@ -404,22 +426,46 @@
             border: none;
             width: 100%;
             transition: 100ms;
+            background-color: $colour-background;
         }
         & textarea {
             border: none;
             height: 5rem;
             transition: 100ms;
+            width: 100%;
+            background-color: $colour-background;
+            resize: none;
         }
     }
-    .contact__container {
+    .contact__firstContainer {
+        background-color: #2a2727;
+        color: #fff;
+        padding: 2rem;
         display: flex;
-        & i {
-            background-color: $colour-primary;
-            color: $colour-secondary;
-            padding: 0.5rem;
-            text-align: center;
+        flex-direction: column;
+        justify-content: space-between;
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+        .contact__socials {
+            display: flex;
+            justify-content: space-evenly;
+            & i {
+                font-size: 2rem;
+                cursor: pointer;
+                color: #fff;
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
         }
-        width: 100%;
+    }
+    .contact__secondContainer {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 2rem;
+        animation: apparition 1.5s ease forwards;
     }
     & label i{
         color: #CC3300;
@@ -427,8 +473,12 @@
     }
     .main__btn {
         text-align: center;
-        margin-top: 2rem;
+        margin-top: 1rem;
         background-color: $colour-tertiary;
+        transition: 300ms ease-in-out;
+        &:hover {
+            background-color: lighten($colour-primary, 20%);
+        }
     }
 }
 
@@ -450,16 +500,6 @@
             }
         }
     }
-    .offers {
-        display: flex;
-        flex-direction: column;
-        .offers__container {
-            width: 100%;
-            height: 20rem;
-            margin-bottom: 0;
-            padding: 0;
-        }
-    }
     .cards {
         display: flex;
         flex-direction: column;
@@ -470,6 +510,29 @@
             width: 90%;
             .cards__card {
                 padding: 0;
+            }
+        }
+    }
+}
+
+@media screen and(max-width: 1000px) {
+    .cards {
+        .cards__card {
+            padding: 1rem 0 1rem 0;
+        }
+    }
+    .offers {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 8rem;
+        .offers__container {
+            width: 90%;
+            height: 20rem;
+            margin-bottom: 0;
+            padding: 0;
+            .offers__desc {
+                width: 90%;
             }
         }
     }
@@ -569,10 +632,19 @@
 }
 
 //CONTACT
-@media screen and(max-width: 700px) {
+@media screen and(max-width: 750px) {
     .contact {
         .contact__form {
+            flex-direction: column-reverse;
             width: 90%;
+            height: 53rem;
+            .contact__firstContainer {
+                
+            }
+            .contact__secondContainer {
+                align-self: center;
+                width: 80%;
+            }
         }
     }
 }

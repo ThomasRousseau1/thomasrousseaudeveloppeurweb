@@ -158,6 +158,10 @@ html, body {
 }
 .main .main__content .main__btn {
   background-color: #606c38;
+  transition: 300ms;
+}
+.main .main__content .main__btn:hover {
+  background-color: #5c7d37;
 }
 
 .banner__img {
@@ -179,9 +183,9 @@ html, body {
 .offers .offers__container {
   color: #fff;
   width: 100%;
-  height: 15rem;
+  height: 18rem;
   background-color: darkslategray;
-  width: 23%;
+  width: 26%;
   padding: 1rem;
   background-position: center;
   background-size: cover;
@@ -192,17 +196,23 @@ html, body {
 .offers .offers__container .offers__title {
   font-size: 1.8rem;
   margin-top: 0.3rem;
-  margin-bottom: 7rem;
+  margin-bottom: 9rem;
 }
 .offers .offers__container .offers__desc {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
+  color: #606c38;
+  background-color: #F5F5F5;
 }
 .offers .offers__container .offers__link {
   color: #FEFAE0;
   background-color: #606c38;
   padding: 0.5rem 1.5rem 0.5rem 1.5rem;
   border-radius: 5px;
+  transition: 300ms;
+}
+.offers .offers__container .offers__link:hover {
+  background-color: #5c7d37;
 }
 .offers .offers__container:nth-child(1) {
   background-image: url(ressources/diogo-fagundes-XvQkiEkLrss-unsplash.jpg);
@@ -393,6 +403,10 @@ html, body {
   text-align: center;
   margin-top: 1rem;
   background-color: #606c38;
+  transition: 300ms;
+}
+.main__offer .main__cardInfos .main__btn:hover {
+  background-color: #5c7d37;
 }
 
 .apropos {
@@ -463,10 +477,11 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: apparition 1.5s ease forwards;
 }
 .contact .contact__img {
   position: absolute;
-  height: 110%;
+  height: 120%;
   width: 100%;
   object-fit: cover;
   opacity: 0.6;
@@ -480,6 +495,7 @@ html, body {
   background: #606c38;
   color: #FEFAE0;
   padding: 0 0.5rem 0 0.5rem;
+  text-align: center;
 }
 .contact .contact__titles p {
   background: #606c38;
@@ -490,8 +506,12 @@ html, body {
   position: relative;
   margin-top: 5rem;
   display: flex;
-  flex-direction: column;
-  width: 40rem;
+  justify-content: space-between;
+  width: 45rem;
+  height: 40rem;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.46);
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.46);
 }
 .contact .contact__form .contact__infos {
   display: flex;
@@ -502,6 +522,8 @@ html, body {
 }
 .contact .contact__form select {
   border: none;
+  height: 1.8rem;
+  background-color: #F5F5F5;
 }
 .contact .contact__form label {
   margin-top: 1rem;
@@ -511,21 +533,45 @@ html, body {
   border: none;
   width: 100%;
   transition: 100ms;
+  background-color: #F5F5F5;
 }
 .contact .contact__form textarea {
   border: none;
   height: 5rem;
   transition: 100ms;
-}
-.contact .contact__container {
-  display: flex;
   width: 100%;
+  background-color: #F5F5F5;
+  resize: none;
 }
-.contact .contact__container i {
-  background-color: #283618;
-  color: #FEFAE0;
-  padding: 0.5rem;
-  text-align: center;
+.contact .contact__firstContainer {
+  background-color: #2a2727;
+  color: #fff;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.contact .contact__firstContainer .contact__socials {
+  display: flex;
+  justify-content: space-evenly;
+}
+.contact .contact__firstContainer .contact__socials i {
+  font-size: 2rem;
+  cursor: pointer;
+  color: #fff;
+}
+.contact .contact__firstContainer .contact__socials i:hover {
+  opacity: 0.8;
+}
+.contact .contact__secondContainer {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  animation: apparition 1.5s ease forwards;
 }
 .contact label i {
   color: #CC3300;
@@ -533,8 +579,12 @@ html, body {
 }
 .contact .main__btn {
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 1rem;
   background-color: #606c38;
+  transition: 300ms ease-in-out;
+}
+.contact .main__btn:hover {
+  background-color: #5c7d37;
 }
 
 @media screen and (max-width: 800px) {
@@ -552,17 +602,6 @@ html, body {
     width: 80%;
   }
 
-  .offers {
-    display: flex;
-    flex-direction: column;
-  }
-  .offers .offers__container {
-    width: 100%;
-    height: 20rem;
-    margin-bottom: 0;
-    padding: 0;
-  }
-
   .cards {
     display: flex;
     flex-direction: column;
@@ -575,6 +614,27 @@ html, body {
   }
   .cards .cards__container .cards__card {
     padding: 0;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .cards .cards__card {
+    padding: 1rem 0 1rem 0;
+  }
+
+  .offers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 8rem;
+  }
+  .offers .offers__container {
+    width: 90%;
+    height: 20rem;
+    margin-bottom: 0;
+    padding: 0;
+  }
+  .offers .offers__container .offers__desc {
+    width: 90%;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -654,9 +714,15 @@ html, body {
     width: 100%;
   }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 750px) {
   .contact .contact__form {
+    flex-direction: column-reverse;
     width: 90%;
+    height: 53rem;
+  }
+  .contact .contact__form .contact__secondContainer {
+    align-self: center;
+    width: 80%;
   }
 }
 .footer {
@@ -676,7 +742,7 @@ html, body {
   margin: 0;
 }
 .footer__quotes .main__btn {
-  background-color: darkslategray;
+  background-color: #2a2727;
 }
 .footer__links {
   display: flex;
@@ -685,6 +751,10 @@ html, body {
 .footer a {
   color: #FEFAE0;
   margin-bottom: 0.8rem;
+  transition: 300ms;
+}
+.footer a:hover {
+  color: #fcee96;
 }
 
 @media screen and (max-width: 700px) {

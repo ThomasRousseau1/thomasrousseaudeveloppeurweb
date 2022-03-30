@@ -4,13 +4,10 @@ function displayForm() {
     formContainer.insertAdjacentHTML( 
         "beforeend",
         `
-        <img src="ressources/bekky-bekks-gk-2lMtCeR8-unsplash.jpg" class="contact__img">
         <form action="https://formsubmit.co/thomas.rousseaudev@outlook.fr" method="POST" class="contact__form">
-            <div class="contact__titles">
-                <h2>VOUS SOUHAITEZ ÉCHANGER ET PARTAGER VOS ENVIES ?</h2>
-                <p>CE FORMULAIRE SERA NOTRE POINT DE DÉPART.</p>
-            </div>
+            <div class="contact__firstContainer">
             <div>
+                <h2>INFOS</h2>
                 <div class="contact__infos">
                     <i class="fa-solid fa-mobile-screen-button"></i>
                     <p>06 58 95 48 64</p>
@@ -19,32 +16,37 @@ function displayForm() {
                     <i class="fa-solid fa-envelope"></i>
                     <p>thomas.rousseaudev@outlook.fr</p>
                 </div>
+                <div class="contact__infos">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Bétheny 51450</p>
+                </div>
+                </div>
+                <div class="contact__socials">
+                    <a href="https://www.linkedin.com/in/thomasrousseau1/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/ThomasRousseau1" target="_blank"><i class="fa-brands fa-github-square"></i></a>
+                </div>
             </div>
+            <div class="contact__secondContainer">
+            <h2>UNE QUESTION ?</h2>
             <label>OBJET DE VOTRE DEMANDE*</label>
+            <div class="contact__container">
             <select name="Demande" >
                 <option value="Contact">Contact</option>
                 <option value="Devis">Devis</option>
                 <option value="Partenariat">Partenariat</option>
                 <option value="Autre">Autre</option>
             </select>
+            </div>
             <label>NOM</label>
-            <div class="contact__container">
-                <i class="fa-solid fa-user"></i>
                 <input type="nom" name="Nom" class="names">
-            </div>
             <label>PRÉNOM</label>
-            <div class="contact__container">
-                <i class="fa-solid fa-user"></i>
                 <input type="prénom" name="Prénom" class="names">
-            </div>
             <label id="mail">MAIL*</label>
-            <div class="contact__container">
-                <i class="fa-solid fa-envelope"></i>
                 <input type="email" name="Mail" class="mail">
-            </div>
             <label id="message">VOTRE MESSAGE*</label>
             <textarea name="Objet de la demande" class="textarea"></textarea>
             <button class="main__btn" type="submit">ENVOYER</button>
+            </div>
         </form>
         `
     )

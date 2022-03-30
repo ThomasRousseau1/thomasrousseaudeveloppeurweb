@@ -16,7 +16,7 @@
             margin: 0;
         }
         .main__btn {
-            background-color: darkslategray;
+            background-color: #2a2727;
         }
     }
     &__links {
@@ -26,6 +26,10 @@
     & a {
         color: $colour-secondary;
         margin-bottom: 0.8rem;
+        transition: 300ms;
+    }
+    & a:hover {
+        color: darken($colour-secondary, 15%);
     }
 }
 
