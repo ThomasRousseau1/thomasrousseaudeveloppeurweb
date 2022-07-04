@@ -220,6 +220,17 @@
     }
 }
 
+.tarifs {
+    padding-top: 5rem;
+    & h2  {
+        text-align: center;
+    }
+    &__container {
+        padding: 0 2rem 0 2rem;
+        text-align: center;
+    }
+}
+
 @keyframes apparition {
     from {
         opacity: 0;
@@ -638,13 +649,21 @@
             flex-direction: column-reverse;
             width: 90%;
             height: 53rem;
-            .contact__firstContainer {
-                
-            }
             .contact__secondContainer {
                 align-self: center;
                 width: 80%;
             }
+        }
+    }
+}
+
+@media screen and(max-width: 425px) {
+    .contact {
+        .contact__form {
+            width: 100%;
+        }
+        .contact__secondContainer {
+            padding: 0;
         }
     }
 }

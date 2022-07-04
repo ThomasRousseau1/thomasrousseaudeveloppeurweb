@@ -14,7 +14,7 @@ function displayForm() {
                 </div>
                 <div class="contact__infos">
                     <i class="fa-solid fa-envelope"></i>
-                    <p>thomas.rousseaudev@outlook.fr</p>
+                    <p>thomas.rousseaudev1@gmail.com</p>
                 </div>
                 <div class="contact__infos">
                     <i class="fa-solid fa-location-dot"></i>
@@ -76,7 +76,7 @@ function validateMail() {
          if(!regExpEmail.test(mail.value) || mail.value == null) {
             // alert('Veuillez entrer une adresse mail valide !')
             event.preventDefault();
-            mailLabel.innerHTML = 'MAIL: Veuillez entrer une adresse mail valide <i class="fa-solid fa-triangle-exclamation"></i>';
+            mailLabel.innerHTML = 'Veuillez entrer une adresse mail valide <i class="fa-solid fa-triangle-exclamation"></i>';
             mail.style.outline = '1.5px solid #CC3300';
             mail.focus;
             return false;
@@ -92,7 +92,7 @@ function validateMessage() {
     validationInput.addEventListener("click", () => {
         if(textArea.value == '') {
             event.preventDefault();
-            textareaLabel.innerHTML = 'VOTRE MESSAGE : Veuillez détailler votre demande <i class="fa-solid fa-triangle-exclamation"></i>';
+            textareaLabel.innerHTML = 'Veuillez détailler votre demande <i class="fa-solid fa-triangle-exclamation"></i>';
             textArea.style.border = '1.5px solid #CC3300';
         }
     })
