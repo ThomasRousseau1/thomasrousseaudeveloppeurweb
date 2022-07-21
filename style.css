@@ -334,17 +334,6 @@ html, body {
   background: #DDA15E;
 }
 
-.tarifs {
-  padding-top: 5rem;
-}
-.tarifs h2 {
-  text-align: center;
-}
-.tarifs__container {
-  padding: 0 2rem 0 2rem;
-  text-align: center;
-}
-
 @keyframes apparition {
   from {
     opacity: 0;
@@ -418,6 +407,86 @@ html, body {
 }
 .main__offer .main__cardInfos .main__btn:hover {
   background-color: #5c7d37;
+}
+
+.maintenance {
+  margin: 5rem 0 5rem 0;
+  text-align: center;
+}
+.maintenance h2 {
+  text-align: center;
+  margin-bottom: 5rem;
+  color: #283618;
+  padding: 0 0.5rem 0 0.5rem;
+}
+.maintenance__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-evenly;
+  height: 48rem;
+  margin-bottom: 5rem;
+}
+.maintenance__card {
+  position: relative;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.46);
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.46);
+  border-radius: 5px;
+}
+.maintenance__title {
+  background-color: #2a2727;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: #fff;
+  padding: 0.5rem;
+  text-align: center;
+}
+.maintenance__price {
+  text-align: center;
+}
+.maintenance__price--pricing {
+  font-size: 2.5rem;
+  margin-bottom: 0;
+  color: #606c38;
+}
+.maintenance__description {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  margin-bottom: 2rem;
+  text-align: justify;
+}
+.maintenance__description i {
+  color: green;
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+}
+.maintenance__description hr {
+  opacity: 40%;
+  margin: 0;
+}
+.maintenance__description p {
+  margin: 1rem 0 0.25rem 0;
+}
+.maintenance a {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 5rem 2rem 5rem;
+}
+.maintenance__forfait {
+  padding: 0 2rem 0 2rem;
+}
+
+.tarifs {
+  padding-top: 5rem;
+}
+.tarifs h2 {
+  text-align: center;
+  color: #283618;
+}
+.tarifs__container {
+  padding: 0 2rem 0 2rem;
+  text-align: center;
 }
 
 .apropos {
@@ -673,6 +742,21 @@ html, body {
     text-align: center;
   }
 }
+@media screen and (max-width: 775px) {
+  .maintenance__container {
+    flex-direction: column;
+    align-items: center;
+    margin: 24rem 0 20rem 0;
+  }
+  .maintenance__card {
+    width: 80%;
+    margin-bottom: 5rem;
+    padding-bottom: 2rem;
+  }
+  .maintenance .main__btn {
+    margin-bottom: 1rem;
+  }
+}
 @media screen and (max-width: 700px) {
   .main__offer .main__container {
     width: 100%;
@@ -697,6 +781,16 @@ html, body {
   .main__title h2 {
     font-size: 1.5rem;
     text-align: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  .maintenance__card {
+    width: 100%;
+    border-radius: 0;
+  }
+  .maintenance__title {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
 }
 @media screen and (max-width: 425px) {
