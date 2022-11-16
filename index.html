@@ -19,16 +19,21 @@
             <a href="contact.html" class="border">CONTACT</a>
         </div>
         <!--Menu portable-->
-        <div class="burger">
-            <span class="burger__line"></span>
-            <span class="burger__line"></span>
-            <span class="burger__line"></span>
-            <!-- <div class="burger__line"></div> -->
+        <div class="header__burgerNav" id="burgerNav">
+            <a class="header__closeBtn" id="close-btn"><i class="fa-solid fa-xmark"></i></a>
+            <a class="header__navlinks" href="index.html">ACCUEIL</a>
+            <a class="header__navlinks" href="creation-de-sites.html">CRÉATION DE SITES</a>
+            <a class="header__navlinks" href="realisations.html">RÉALISATIONS</a>
+            <a class="header__navlinks" href="contact.html">CONTACT</a> 
         </div>
+        <a href="#" id="open-btn">
+            <div class="burger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </a>
     </header>
-    <div class="burger__menu">
-        <!-- <i class="fa-solid fa-xmark"></i> -->
-    </div>
     <main class="main">
             <!-- <img src="ressources/sarah-dorweiler-QeVmJxZOv3k-unsplash.jpg" class="main__img"> -->
             <div class="main__content">    
@@ -99,6 +104,7 @@
             <a href="plan-du-site.html">PLAN DU SITE</a>
         </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="index.js"></script>
+    <script src="burger.js"></script>
 </body>
 </html>

@@ -14,7 +14,7 @@ function displayForm() {
                 </div>
                 <div class="contact__infos">
                     <i class="fa-solid fa-envelope"></i>
-                    <p>thomas.rousseaudev1@gmail.com</p>
+                    <a href="mailto:thomas.rousseaudev1@gmail.com">thomas.rousseaudev1@gmail.com</a>
                 </div>
                 <div class="contact__infos">
                     <i class="fa-solid fa-location-dot"></i>

@@ -19,55 +19,23 @@
             <a href="contact.html" class="border">CONTACT</a>
         </div>
         <!--Menu portable-->
-        <div class="burger">
-            <div class="burger__line"></div>
-            <div class="burger__line"></div>
-            <div class="burger__line"></div>
-            <!-- <div class="burger__line"></div> -->
+        <div class="header__burgerNav" id="burgerNav">
+            <a class="header__closeBtn" id="close-btn"><i class="fa-solid fa-xmark"></i></a>
+            <a class="header__navlinks" href="index.html">ACCUEIL</a>
+            <a class="header__navlinks" href="creation-de-sites.html">CRÉATION DE SITES</a>
+            <a class="header__navlinks" href="realisations.html">RÉALISATIONS</a>
+            <a class="header__navlinks" href="contact.html">CONTACT</a> 
         </div>
+        <a href="#" id="open-btn">
+            <div class="burger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </a>
     </header>
-    <div class="burger__menu">
-        <!-- <i class="fa-solid fa-xmark"></i> -->
-    </div>
     <main>
         <section class="contact">
-            <!-- <div class="contact__titles">
-                <h2>VOUS SOUHAITEZ ÉCHANGER ET PARTAGER VOS ENVIES ?</h2>
-                <p>CE FORMULAIRE SERA NOTRE POINT DE DÉPART.</p>
-            </div> -->
-            <!-- <img src="ressources/christin-hume-Hcfwew744z4-unsplash.jpg" class="contact__img">
-            <form class="contact__form">
-                <div class="contact__titles">
-                    <h2>VOUS SOUHAITEZ ÉCHANGER ET PARTAGER VOS ENVIES ?</h2>
-                    <p>CE FORMULAIRE SERA NOTRE POINT DE DÉPART.</p>
-                </div>
-                <div>
-                    <div class="contact__infos">
-                        <i class="fa-solid fa-mobile-screen-button"></i>
-                        <p>06 58 95 48 64</p>
-                    </div>
-                    <div class="contact__infos">
-                        <i class="fa-solid fa-envelope"></i>
-                        <p>thomas.rousseaudev@outlook.fr</p>
-                    </div>
-                </div>
-                <label>OBJET DE VOTRE DEMANDE:</label>
-                <select name="Demande" >
-                    <option value="Contact">Contact</option>
-                    <option value="Devis">Devis</option>
-                    <option value="Partenariat">Partenariat</option>
-                    <option value="Autre">Autre</option>
-                </select>
-                <label>NOM:</label>
-                <input>
-                <label>PRÉNOM:</label>
-                <input>
-                <label>MAIL:</label>
-                <input>
-                <label>VOTRE MESSAGE:</label>
-                <textarea></textarea>
-                <a href="" class="main__btn">ENVOYER</a>
-            </form> -->
         </section>
     </main>
     <footer class="footer">
@@ -82,7 +50,8 @@
             <a href="plan-du-site.html">PLAN DU SITE</a>
         </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="index.js"></script>
+    <script src="burger.js"></script>
     <script src="formValidation.js"></script>
 </body>
 </html>

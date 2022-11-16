@@ -18,17 +18,22 @@
             <a href="realisations.html" class="border">RÉALISATIONS</a>
             <a href="contact.html" class="border">CONTACT</a>
         </div>
-        <!--Menu portable-->
-        <div class="burger">
-            <div class="burger__line"></div>
-            <div class="burger__line"></div>
-            <div class="burger__line"></div>
-            <!-- <div class="burger__line"></div> -->
+        <!-- Menu portable -->
+        <div class="header__burgerNav" id="burgerNav">
+            <a class="header__closeBtn" id="close-btn"><i class="fa-solid fa-xmark"></i></a>
+            <a class="header__navlinks" href="index.html">ACCUEIL</a>
+            <a class="header__navlinks" href="creation-de-sites.html">CRÉATION DE SITES</a>
+            <a class="header__navlinks" href="realisations.html">RÉALISATIONS</a>
+            <a class="header__navlinks" href="contact.html">CONTACT</a> 
         </div>
+        <a href="#" id="open-btn">
+            <div class="burger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </a>
     </header>
-    <div class="burger__menu">
-        <!-- <i class="fa-solid fa-xmark"></i> -->
-    </div>
     <main class="main">
         <div class="main__content">
             <h2>RÉALISATIONS</h2>
@@ -50,10 +55,10 @@
                     </div>
                 </div>
                 <div class="cards__card--rea">
-                    <img src="ressources/montain.jpg">
+                    <img src="ressources/tengyart-Z4i7xef7EhY-unsplash (1).jpg">
                     <div class="cards__rea">
-                        <h3>WATER</h3>
-                        <p>Lorem ipsum dolor sit amet</p>
+                        <h3>JANE DOE</h3>
+                        <p>Salon de coiffure</p>
                         <a class="cards__btn" href="" target="_blank">DÉCOUVRIR LE SITE</a>
                     </div>
                 </div>
@@ -68,10 +73,10 @@
                     </div>
                 </div>
                 <div class="cards__card--rea">
-                    <img src="ressources/books.jpg">
+                    <img src="ressources/seongho-jang-v3cQex9UX7A-unsplash.jpg">
                     <div class="cards__rea">
-                        <h3>BOOKS</h3>
-                        <p>Lorem ipsum dolor sit amet</p>
+                        <h3>BAKERY</h3>
+                        <p>Boulangerie Pâtisserie</p>
                         <a class="cards__btn" href="" target="_blank">DÉCOUVRIR LE SITE</a>
                     </div>
                 </div>
@@ -90,6 +95,7 @@
             <a href="plan-du-site.html">PLAN DU SITE</a>
         </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="index.js"></script>
+    <script src="burger.js"></script>
 </body>
 </html>

@@ -18,23 +18,28 @@
             <a href="realisations.html" class="border">RÉALISATIONS</a>
             <a href="contact.html" class="border">CONTACT</a>
         </div>
-        <!--Menu portable-->
-        <div class="burger">
-            <span class="burger__line"></span>
-            <span class="burger__line"></span>
-            <span class="burger__line"></span>
-            <!-- <div class="burger__line"></div> -->
+        <!-- Menu portable -->
+        <div class="header__burgerNav" id="burgerNav">
+            <a class="header__closeBtn" id="close-btn"><i class="fa-solid fa-xmark"></i></a>
+            <a class="header__navlinks" href="index.html">ACCUEIL</a>
+            <a class="header__navlinks" href="creation-de-sites.html">CRÉATION DE SITES</a>
+            <a class="header__navlinks" href="realisations.html">RÉALISATIONS</a>
+            <a class="header__navlinks" href="contact.html">CONTACT</a> 
         </div>
+        <a href="#" id="open-btn">
+            <div class="burger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </a>
     </header>
-    <div class="burger__menu">
-        <!-- <i class="fa-solid fa-xmark"></i> -->
-    </div>
     <main class="main">
         <section class="main__title">
             <div>
                 <h2>CRÉATION DE SITES INTERNET</h2>
             </div>
-            <p>Vous souhaitez gagner en visibilité ?<br> Diffuser Vos 
+            <p>Vous souhaitez gagner en visibilité ?<br> Diffuser vos 
                 supports de communication ?<br> Acquérir de nouveaux clients 
                 et les fidéliser ?<br> 
                 Créez votre site web !
@@ -120,7 +125,7 @@
                 <div class="main__cardInfos">
                     <p class="main__quote">Votre Boutique en ligne</p>
                     <p>À partir de</p><br>
-                    <p class="main__price">1950€</p>
+                    <p class="main__price">1450€</p>
                     <p>- Vente automatique<br>
                         - Suivi des ventes simple<br>
                         - Gestion du stock<br>
@@ -202,20 +207,19 @@
                     <a class="main__btn" href="contact.html">CONTACT</a>
                 </div>
             </div>
-
             <div class="maintenance__forfait">
+                <h2>FORFAITS</h2>
                 <div>
-                    <h3>Forfait mensuel</h3>
+                    <h3>Mensuel</h3>
                     <p>Sans engagement, il peut être arrêté à tout moment.</p>
                 </div>
                 <div>
-                    <h3>Forfait annuel</h3>
+                    <h3>Annuel</h3>
                     <p><strong>Réduction de 10%</strong> pour un forfait annuel. Paiement à effectuer en 1 fois pour 12 mois.</p>
                 </div>
             </div>
 
         </section>
-
         <section class="tarifs">
             <h2>AUTRES TARIFS ET DEVIS</h2>
             <div class="tarifs__container">
@@ -228,8 +232,6 @@
                 </div>
             </div>
         </section>
-
-
     </main>
     <footer class="footer">
         <div class="footer__quotes">
@@ -243,6 +245,7 @@
             <a href="plan-du-site.html">PLAN DU SITE</a>
         </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="index.js"></script>
+    <script src="burger.js"></script>
 </body>
 </html>
